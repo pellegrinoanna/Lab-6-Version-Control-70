@@ -6,6 +6,29 @@ def encoder(password):
         new_pass += str(item)
     return new_pass
 
+def decoder(new_password):
+    pass
+
 if __name__ == "__main__" :
-    password = input()
-    print(encoder(password))
+    menu = True
+    while True:
+        print('Menu')
+        print('-------------')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit')
+        print('Please enter an option:')
+        option = int(input())
+
+        if option == 1:
+            print('Please enter your password to encode:')
+            password = input()
+            new_password = encoder(password)
+            print('Your password has been encoded and stored!')
+
+        elif option == 2:
+            decode_password = decoder(new_password)
+            print(f'The encoded password is {new_password} and the original password is {decode_password}. ')
+
+        elif option == 3:
+            menu = False
