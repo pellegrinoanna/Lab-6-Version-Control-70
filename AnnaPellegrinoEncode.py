@@ -7,7 +7,11 @@ def encoder(password):
     return new_pass
 
 def decoder(new_password):
-    pass
+    decoded = ''
+    for item in new_password:
+        item = int(item) - 3
+        decoded += str(item)
+    return decoded
 
 if __name__ == "__main__" :
     menu = True
